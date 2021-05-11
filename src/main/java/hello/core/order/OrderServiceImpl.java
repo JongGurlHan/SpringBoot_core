@@ -3,7 +3,10 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService{
 
    private final MemberRepository memberRepository;
@@ -11,7 +14,7 @@ public class OrderServiceImpl implements OrderService{
 //누군가 클라이언트인 OrderServiceImpl에 DiscountPolicy의 구현객체를 대신산성하고 주입해줘야한다.
 //    private DiscountPolicy discountPolicy;
 
-
+    @Autowired
     public  OrderServiceImpl(MemberRepository memberRepository,  DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
