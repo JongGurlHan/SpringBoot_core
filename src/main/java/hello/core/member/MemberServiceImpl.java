@@ -12,7 +12,7 @@ public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository;
 
     //자동의존관계주입 - 생성자에 붙여주면 스프링이 MemberRepository타입에 맞는 애를 의존관계 주입을 해준다
-    @Autowired
+    @Autowired // 생성자가 하나 있을땐 생략가능
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
