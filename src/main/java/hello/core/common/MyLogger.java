@@ -18,7 +18,7 @@ public class MyLogger {
         this.requestURL = requestURL;
     }
 
-    public void log(String message){
+    public void log(String message) {
         System.out.println("[" + uuid + "]" + "[" + requestURL + "]" + message);
     }
 
